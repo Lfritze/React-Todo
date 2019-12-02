@@ -26,7 +26,7 @@ class TodoList extends Component {
                         completed={task.completed}
                         toggleTask={this.props.toggleTask}
                     />
-                ))}; 
+                ))}
                 <button onClick={this.props.clearCompleted}>Delete Completed Tasks</button>
         </div> //className = 'todo-list'
         ) // return

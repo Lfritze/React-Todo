@@ -53,7 +53,7 @@ class App extends Component {
            completed: !task.completed
          };
        } else {
-         return task;
+         return task
        }
      })
    })

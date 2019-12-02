@@ -19,7 +19,7 @@ class App extends Component {
   constructor () {
     super ();
     this.state = {
-      name: 'Leighton Fritze',
+      name: 'Leighton',
       data: data
     };
   };
@@ -51,7 +51,7 @@ class App extends Component {
            task: task.task,
            id: task.id,
            completed: !task.completed
-         }
+         };
        } else {
          return task;
        }
@@ -67,7 +67,7 @@ class App extends Component {
           <TodoForm  addTask={this.addTask} />
         </div>
         <div className ='main-list'>
-          <TodoList date={this.state.data} toggleTask={this.toggleTask} clearCompleted={this.clearCompleted} />
+          <TodoList data={this.state.data} toggleTask={this.toggleTask} clearCompleted={this.clearCompleted} />
         </div>
       </div>
     );

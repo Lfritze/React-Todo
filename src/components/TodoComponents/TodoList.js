@@ -9,14 +9,15 @@
 import React, { Component } from 'react'
 import Todo from './Todo'
 
+
 class TodoList extends Component {
     constructor(props) {
         super(props)
         console.log(props)
     }
-    render () {
+    render() {
         return (
-            <div className='todo-list'>
+            <div>
                 {this.props.data.map(task => (
                     <Todo
                         key={task.id} 

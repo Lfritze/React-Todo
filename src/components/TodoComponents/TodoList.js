@@ -1,2 +1,4 @@
-// your components will all go in this `component` directory.
-// feel free to change this component.js into TodoList.js
+// NOTES 
+//Your todo list should display a list of todos, an input field, a submit button, and a clear all button.
+
+import React, { Component } from 'react'

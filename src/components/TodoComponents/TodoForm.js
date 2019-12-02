@@ -1,4 +1,14 @@
 import React, { Component } from 'react'
+import styled from 'styled-components';
+
+const TodoInput = styled.input`
+width: 100%;
+font-size: 14px;
+padding: 6px 8px;
+border-width: 1px;
+border-style: solid;
+`;
+
 
 class TodoForm extends Component {
     constructor(props) {
@@ -25,7 +35,7 @@ class TodoForm extends Component {
     render() {
         return (
             <form onSubmit={this.taskSubmit}>
-                <input 
+                <TodoInput 
                     type='text'
                     value={this.state.task}
                     name='task'

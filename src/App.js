@@ -1,6 +1,30 @@
 import React, { Component } from 'react';
 import TodoList from './components/TodoComponents/TodoList'
 import TodoForm from './components/TodoComponents/TodoForm'
+import styled from 'styled-components';
+
+const AppDiv = styled.div`
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #5D9B84;
+  max-width: 60%;
+  padding: 3%;
+  border-radius: 50px;
+`;
+
+const InputForm = styled.div`
+  margin-right: 1%;
+  padding: 2%;
+`;
+
+const MainList = styled.div`
+  margin-top: 2%;
+`;
 
 const data = [
   {
@@ -61,15 +85,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className='app-div'> 
+      <AppDiv className='app-div'> 
         <h2>{this.state.name}'s Todo List</h2>
-        <div className='input-form'>
+        <InputForm className='input-form'>
           <TodoForm  addTask={this.addTask} />
-        </div>
-        <div className ='main-list'>
+        </InputForm>
+        <MainList className ='main-list'>
           <TodoList data={this.state.data} toggleTask={this.toggleTask} clearCompleted={this.clearCompleted} />
-        </div>
-      </div>
+        </MainList>
+      </AppDiv>
     );
   }
 }

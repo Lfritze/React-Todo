@@ -5,11 +5,9 @@
 import React, { Component } from 'react'
 import './Todo.css';
 
-class Todo extends Component {
-    constructor() {
-        super();
-    }
 
+class Todo extends Component {
+  
     render() {
         return (
             <div onClick={() => this.props.toggleTask(this.props.id)}

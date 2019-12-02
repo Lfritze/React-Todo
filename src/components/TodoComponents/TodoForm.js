@@ -5,7 +5,15 @@ const TodoForm = (props) => {
         <form>
             <input 
                 onChange={props.handleTodoChange}
+                type='text'
+                name='todo'
+                value={props.value}
+                placeholder='Things Todo'
             />
+            <button onClick={props.handleAddTodo}>Add Task</button>
+            <button onClick={props.handleClearTodos}>Delete Task</button>
         </form>
-    )
-}
+    );
+};
+
+export default TodoForm
